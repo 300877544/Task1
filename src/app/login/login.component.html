@@ -1,0 +1,54 @@
+<h1 class="text-center">Log in </h1>
+<form [formGroup] ="loginForm">
+    <div class="row">
+        
+        <div class="col-lg-4"></div>
+  
+        <label for="user" class="col-sm-2 col-form-label">User Name</label>
+        <div class="col-lg-4">
+     
+            <div class="form-group">
+                <input type="text" class="form-control" formControlName="user" id="user">
+                <div *ngIf="getError('user')&&(getControl('user').touched || getControl('user').dirty)">
+                   <div *ngIf="getError('user').required">
+                    user name is required
+                   </div>
+                </div>   
+            </div>
+                </div>
+            </div>>
+               
+                <div class="row">
+        
+                    <div class="col-lg-4"></div>
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="password" formControlName="password">
+                            <div *ngIf="getError('password') && (getControl('password').touched || getControl('password').dirty)">
+                                <div *ngIf="getError('password').required">
+                                  password is required
+                                </div>
+                             </div>
+                             </div>
+                             </div>
+                            </div>
+                            <div class="row">
+        
+                              <div class="col-lg-4"></div>
+                            <div class="form-group">
+                              <button class="bt btn-info" type="submit">Login</button>
+                            </div>
+                            </div>
+                            <div class="row">
+        
+                              <div class="col-lg-4"></div>
+                            <div class="form-group">
+                              <a routerLink="/register">Register</a>
+                              </div>
+                              </div>
+                        </form>
+
+                        
+
+
